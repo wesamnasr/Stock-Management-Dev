@@ -36,6 +36,7 @@ namespace Stock_Management.Models
                 .OnDelete(DeleteBehavior.Cascade);
 
 
+
             modelBuilder.Entity<SupplierBillItem>()
                 .HasOne(i => i.Product)
                 .WithMany()
