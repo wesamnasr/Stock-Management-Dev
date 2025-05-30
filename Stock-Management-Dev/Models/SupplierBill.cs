@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stock_Management.Models
+namespace Stock_Management_Dev.Models
 {
     public class SupplierBill
     {

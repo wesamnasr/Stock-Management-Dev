@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stock_Management.Models
+namespace Stock_Management_Dev.Models
 {
     public class AppDBContext : DbContext
     {
@@ -34,6 +34,7 @@ namespace Stock_Management.Models
                 .WithMany(b => b.Items)
                 .HasForeignKey(i => i.SupplierBillID)
                 .OnDelete(DeleteBehavior.Cascade);
+
 
 
             modelBuilder.Entity<SupplierBillItem>()
