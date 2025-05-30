@@ -5,11 +5,10 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Stock_Management.Models;
+using Stock_Management_Dev.Models;
 
-#nullable disable
 
-namespace StockManagementDev.Migrations
+namespace StockManagementDev_Dev.Migrations
 {
     [DbContext(typeof(AppDBContext))]
     [Migration("20250528195804_init")]
@@ -18,7 +17,6 @@ namespace StockManagementDev.Migrations
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
-#pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
