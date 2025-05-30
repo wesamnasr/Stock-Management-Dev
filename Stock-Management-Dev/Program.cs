@@ -7,7 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 namespace Stock_Management_Dev
-{
+{//ahmed
     internal static class Program
     {
         /// <summary>
