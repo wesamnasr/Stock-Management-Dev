@@ -80,6 +80,7 @@ namespace Stock_Management.Models
                     SupplierID = i,
                     Name = $"Supplier {i}",
                     Phone = $"987654321{i}",
+                 
 
                 })
             );

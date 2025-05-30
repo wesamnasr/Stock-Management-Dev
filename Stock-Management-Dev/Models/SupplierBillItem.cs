@@ -14,9 +14,12 @@ namespace Stock_Management.Models
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal TotalPrice { get; set; }
-
+        public DateTime PurchaseDate { get; set; }
+        public string Description { get; set; }
         public virtual SupplierBill SupplierBill { get; set; }
+        
         public virtual Product Product { get; set; }
+
        
         
         // Constructor to calculate TotalPrice

@@ -15,7 +15,7 @@ namespace Stock_Management.Models
         public decimal TotalAmount { get; set; }
         public decimal PaidAmount { get; set; }
 
-
+        public string Description { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual ICollection<SupplierBillItem> Items { get; set; } = new List<SupplierBillItem>();
     }

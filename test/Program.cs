@@ -1,12 +1,12 @@
-﻿using DevExpress.LookAndFeel;
-using DevExpress.Skins;
-using DevExpress.UserSkins;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
 
-namespace Stock_Management_Dev
+namespace test
 {
     internal static class Program
     {
@@ -18,7 +18,7 @@ namespace Stock_Management_Dev
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SupplierBillform());
+            Application.Run(new Form1());
         }
     }
 }

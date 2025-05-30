@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Stock_Management_Dev
+namespace test
 {
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
