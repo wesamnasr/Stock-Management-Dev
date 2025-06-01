@@ -14,7 +14,7 @@ namespace Stock_Management_Dev
         public Form1()
         {
             InitializeComponent();
-
+            Console.WriteLine("5555555555555555555555555555555555555555555555555555555555555555555555555");
         }
 
     }
