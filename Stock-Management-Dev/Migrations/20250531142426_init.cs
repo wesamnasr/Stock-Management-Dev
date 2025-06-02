@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace StockManagementDev.Migrations
+namespace Stock_Management_Dev.Migrations
 {
     /// <inheritdoc />
     public partial class init : Migration
@@ -210,16 +210,16 @@ namespace StockManagementDev.Migrations
                 columns: new[] { "CustomerBillID", "BillDate", "CustomerID", "TotalAmount" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2025, 5, 27, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2602), 1, 0m },
-                    { 2, new DateTime(2025, 5, 26, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2632), 2, 0m },
-                    { 3, new DateTime(2025, 5, 25, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2648), 3, 0m },
-                    { 4, new DateTime(2025, 5, 24, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2663), 4, 0m },
-                    { 5, new DateTime(2025, 5, 23, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2677), 5, 0m },
-                    { 6, new DateTime(2025, 5, 22, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2697), 6, 0m },
-                    { 7, new DateTime(2025, 5, 21, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2712), 7, 0m },
-                    { 8, new DateTime(2025, 5, 20, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2726), 8, 0m },
-                    { 9, new DateTime(2025, 5, 19, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2740), 9, 0m },
-                    { 10, new DateTime(2025, 5, 18, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2760), 10, 0m }
+                    { 1, new DateTime(2025, 5, 30, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(7024), 1, 0m },
+                    { 2, new DateTime(2025, 5, 29, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8167), 2, 0m },
+                    { 3, new DateTime(2025, 5, 28, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8176), 3, 0m },
+                    { 4, new DateTime(2025, 5, 27, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8181), 4, 0m },
+                    { 5, new DateTime(2025, 5, 26, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8187), 5, 0m },
+                    { 6, new DateTime(2025, 5, 25, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8199), 6, 0m },
+                    { 7, new DateTime(2025, 5, 24, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8204), 7, 0m },
+                    { 8, new DateTime(2025, 5, 23, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8210), 8, 0m },
+                    { 9, new DateTime(2025, 5, 22, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8215), 9, 0m },
+                    { 10, new DateTime(2025, 5, 21, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8223), 10, 0m }
                 });
 
             migrationBuilder.InsertData(
@@ -244,16 +244,16 @@ namespace StockManagementDev.Migrations
                 columns: new[] { "SupplierBillID", "BillDate", "PaidAmount", "SupplierID", "TotalAmount" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2025, 5, 27, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2037), 0m, 1, 0m },
-                    { 2, new DateTime(2025, 5, 26, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2165), 0m, 2, 0m },
-                    { 3, new DateTime(2025, 5, 25, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2180), 0m, 3, 0m },
-                    { 4, new DateTime(2025, 5, 24, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2193), 0m, 4, 0m },
-                    { 5, new DateTime(2025, 5, 23, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2202), 0m, 5, 0m },
-                    { 6, new DateTime(2025, 5, 22, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2372), 0m, 6, 0m },
-                    { 7, new DateTime(2025, 5, 21, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2393), 0m, 7, 0m },
-                    { 8, new DateTime(2025, 5, 20, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2410), 0m, 8, 0m },
-                    { 9, new DateTime(2025, 5, 19, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2421), 0m, 9, 0m },
-                    { 10, new DateTime(2025, 5, 18, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2441), 0m, 10, 0m }
+                    { 1, new DateTime(2025, 5, 30, 17, 24, 25, 309, DateTimeKind.Local).AddTicks(2616), 0m, 1, 0m },
+                    { 2, new DateTime(2025, 5, 29, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2095), 0m, 2, 0m },
+                    { 3, new DateTime(2025, 5, 28, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2156), 0m, 3, 0m },
+                    { 4, new DateTime(2025, 5, 27, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2162), 0m, 4, 0m },
+                    { 5, new DateTime(2025, 5, 26, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2166), 0m, 5, 0m },
+                    { 6, new DateTime(2025, 5, 25, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2178), 0m, 6, 0m },
+                    { 7, new DateTime(2025, 5, 24, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2183), 0m, 7, 0m },
+                    { 8, new DateTime(2025, 5, 23, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2187), 0m, 8, 0m },
+                    { 9, new DateTime(2025, 5, 22, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2191), 0m, 9, 0m },
+                    { 10, new DateTime(2025, 5, 21, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2196), 0m, 10, 0m }
                 });
 
             migrationBuilder.InsertData(

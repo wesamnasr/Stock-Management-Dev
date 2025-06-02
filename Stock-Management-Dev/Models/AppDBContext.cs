@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Stock_Management.Models
+namespace Stock_Management_Dev.Models
 {
     public class AppDBContext : DbContext
     {
@@ -22,7 +23,8 @@ namespace Stock_Management.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=StockManagement-Dev;Trusted_Connection=True;Trust server certificate=true ");
+            optionsBuilder.UseSqlServer("Server=.;Database=StockManagement-Dev;Trusted_Connection=True;Trust server certificate=true ")
+                                .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
         }
 
 
@@ -34,6 +36,7 @@ namespace Stock_Management.Models
                 .WithMany(b => b.Items)
                 .HasForeignKey(i => i.SupplierBillID)
                 .OnDelete(DeleteBehavior.Cascade);
+
 
 
             modelBuilder.Entity<SupplierBillItem>()

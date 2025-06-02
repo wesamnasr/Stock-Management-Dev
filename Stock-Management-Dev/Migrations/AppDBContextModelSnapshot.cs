@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Stock_Management.Models;
+using Stock_Management_Dev.Models;
 
 #nullable disable
 
-namespace StockManagementDev.Migrations
+namespace Stock_Management_Dev.Migrations
 {
     [DbContext(typeof(AppDBContext))]
     partial class AppDBContextModelSnapshot : ModelSnapshot
@@ -17,12 +17,12 @@ namespace StockManagementDev.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Stock_Management.Models.Customer", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
                         .ValueGeneratedOnAdd()
@@ -109,7 +109,7 @@ namespace StockManagementDev.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.CustomerBill", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.CustomerBill", b =>
                 {
                     b.Property<int>("CustomerBillID")
                         .ValueGeneratedOnAdd()
@@ -136,76 +136,76 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             CustomerBillID = 1,
-                            BillDate = new DateTime(2025, 5, 27, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2602),
+                            BillDate = new DateTime(2025, 5, 30, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(7024),
                             CustomerID = 1,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 2,
-                            BillDate = new DateTime(2025, 5, 26, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2632),
+                            BillDate = new DateTime(2025, 5, 29, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8167),
                             CustomerID = 2,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 3,
-                            BillDate = new DateTime(2025, 5, 25, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2648),
+                            BillDate = new DateTime(2025, 5, 28, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8176),
                             CustomerID = 3,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 4,
-                            BillDate = new DateTime(2025, 5, 24, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2663),
+                            BillDate = new DateTime(2025, 5, 27, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8181),
                             CustomerID = 4,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 5,
-                            BillDate = new DateTime(2025, 5, 23, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2677),
+                            BillDate = new DateTime(2025, 5, 26, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8187),
                             CustomerID = 5,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 6,
-                            BillDate = new DateTime(2025, 5, 22, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2697),
+                            BillDate = new DateTime(2025, 5, 25, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8199),
                             CustomerID = 6,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 7,
-                            BillDate = new DateTime(2025, 5, 21, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2712),
+                            BillDate = new DateTime(2025, 5, 24, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8204),
                             CustomerID = 7,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 8,
-                            BillDate = new DateTime(2025, 5, 20, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2726),
+                            BillDate = new DateTime(2025, 5, 23, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8210),
                             CustomerID = 8,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 9,
-                            BillDate = new DateTime(2025, 5, 19, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2740),
+                            BillDate = new DateTime(2025, 5, 22, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8215),
                             CustomerID = 9,
                             TotalAmount = 0m
                         },
                         new
                         {
                             CustomerBillID = 10,
-                            BillDate = new DateTime(2025, 5, 18, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2760),
+                            BillDate = new DateTime(2025, 5, 21, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(8223),
                             CustomerID = 10,
                             TotalAmount = 0m
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.CustomerBillItem", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.CustomerBillItem", b =>
                 {
                     b.Property<int>("CustomerBillItemID")
                         .ValueGeneratedOnAdd()
@@ -329,7 +329,7 @@ namespace StockManagementDev.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.Product", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.Product", b =>
                 {
                     b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd()
@@ -441,7 +441,7 @@ namespace StockManagementDev.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.Supplier", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.Supplier", b =>
                 {
                     b.Property<int>("SupplierID")
                         .ValueGeneratedOnAdd()
@@ -534,7 +534,7 @@ namespace StockManagementDev.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.SupplierBill", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.SupplierBill", b =>
                 {
                     b.Property<int>("SupplierBillID")
                         .ValueGeneratedOnAdd()
@@ -564,7 +564,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 1,
-                            BillDate = new DateTime(2025, 5, 27, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2037),
+                            BillDate = new DateTime(2025, 5, 30, 17, 24, 25, 309, DateTimeKind.Local).AddTicks(2616),
                             PaidAmount = 0m,
                             SupplierID = 1,
                             TotalAmount = 0m
@@ -572,7 +572,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 2,
-                            BillDate = new DateTime(2025, 5, 26, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2165),
+                            BillDate = new DateTime(2025, 5, 29, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2095),
                             PaidAmount = 0m,
                             SupplierID = 2,
                             TotalAmount = 0m
@@ -580,7 +580,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 3,
-                            BillDate = new DateTime(2025, 5, 25, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2180),
+                            BillDate = new DateTime(2025, 5, 28, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2156),
                             PaidAmount = 0m,
                             SupplierID = 3,
                             TotalAmount = 0m
@@ -588,7 +588,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 4,
-                            BillDate = new DateTime(2025, 5, 24, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2193),
+                            BillDate = new DateTime(2025, 5, 27, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2162),
                             PaidAmount = 0m,
                             SupplierID = 4,
                             TotalAmount = 0m
@@ -596,7 +596,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 5,
-                            BillDate = new DateTime(2025, 5, 23, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2202),
+                            BillDate = new DateTime(2025, 5, 26, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2166),
                             PaidAmount = 0m,
                             SupplierID = 5,
                             TotalAmount = 0m
@@ -604,7 +604,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 6,
-                            BillDate = new DateTime(2025, 5, 22, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2372),
+                            BillDate = new DateTime(2025, 5, 25, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2178),
                             PaidAmount = 0m,
                             SupplierID = 6,
                             TotalAmount = 0m
@@ -612,7 +612,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 7,
-                            BillDate = new DateTime(2025, 5, 21, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2393),
+                            BillDate = new DateTime(2025, 5, 24, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2183),
                             PaidAmount = 0m,
                             SupplierID = 7,
                             TotalAmount = 0m
@@ -620,7 +620,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 8,
-                            BillDate = new DateTime(2025, 5, 20, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2410),
+                            BillDate = new DateTime(2025, 5, 23, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2187),
                             PaidAmount = 0m,
                             SupplierID = 8,
                             TotalAmount = 0m
@@ -628,7 +628,7 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 9,
-                            BillDate = new DateTime(2025, 5, 19, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2421),
+                            BillDate = new DateTime(2025, 5, 22, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2191),
                             PaidAmount = 0m,
                             SupplierID = 9,
                             TotalAmount = 0m
@@ -636,14 +636,14 @@ namespace StockManagementDev.Migrations
                         new
                         {
                             SupplierBillID = 10,
-                            BillDate = new DateTime(2025, 5, 18, 22, 58, 1, 721, DateTimeKind.Local).AddTicks(2441),
+                            BillDate = new DateTime(2025, 5, 21, 17, 24, 25, 313, DateTimeKind.Local).AddTicks(2196),
                             PaidAmount = 0m,
                             SupplierID = 10,
                             TotalAmount = 0m
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.SupplierBillItem", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.SupplierBillItem", b =>
                 {
                     b.Property<int>("SupplierBillItemID")
                         .ValueGeneratedOnAdd()
@@ -767,9 +767,9 @@ namespace StockManagementDev.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.CustomerBill", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.CustomerBill", b =>
                 {
-                    b.HasOne("Stock_Management.Models.Customer", "Customer")
+                    b.HasOne("Stock_Management_Dev.Models.Customer", "Customer")
                         .WithMany("Invoices")
                         .HasForeignKey("CustomerID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -778,15 +778,15 @@ namespace StockManagementDev.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.CustomerBillItem", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.CustomerBillItem", b =>
                 {
-                    b.HasOne("Stock_Management.Models.CustomerBill", "CustomerBill")
+                    b.HasOne("Stock_Management_Dev.Models.CustomerBill", "CustomerBill")
                         .WithMany("Items")
                         .HasForeignKey("CustomerBillID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Stock_Management.Models.Product", "Product")
+                    b.HasOne("Stock_Management_Dev.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -797,9 +797,9 @@ namespace StockManagementDev.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.Product", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.Product", b =>
                 {
-                    b.HasOne("Stock_Management.Models.Supplier", "Supplier")
+                    b.HasOne("Stock_Management_Dev.Models.Supplier", "Supplier")
                         .WithMany("Products")
                         .HasForeignKey("SupplierID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -808,9 +808,9 @@ namespace StockManagementDev.Migrations
                     b.Navigation("Supplier");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.SupplierBill", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.SupplierBill", b =>
                 {
-                    b.HasOne("Stock_Management.Models.Supplier", "Supplier")
+                    b.HasOne("Stock_Management_Dev.Models.Supplier", "Supplier")
                         .WithMany("Invoices")
                         .HasForeignKey("SupplierID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -819,15 +819,15 @@ namespace StockManagementDev.Migrations
                     b.Navigation("Supplier");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.SupplierBillItem", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.SupplierBillItem", b =>
                 {
-                    b.HasOne("Stock_Management.Models.Product", "Product")
+                    b.HasOne("Stock_Management_Dev.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Stock_Management.Models.SupplierBill", "SupplierBill")
+                    b.HasOne("Stock_Management_Dev.Models.SupplierBill", "SupplierBill")
                         .WithMany("Items")
                         .HasForeignKey("SupplierBillID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -838,24 +838,24 @@ namespace StockManagementDev.Migrations
                     b.Navigation("SupplierBill");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.Customer", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.Customer", b =>
                 {
                     b.Navigation("Invoices");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.CustomerBill", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.CustomerBill", b =>
                 {
                     b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.Supplier", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.Supplier", b =>
                 {
                     b.Navigation("Invoices");
 
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("Stock_Management.Models.SupplierBill", b =>
+            modelBuilder.Entity("Stock_Management_Dev.Models.SupplierBill", b =>
                 {
                     b.Navigation("Items");
                 });

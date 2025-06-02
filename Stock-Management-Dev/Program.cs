@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 namespace Stock_Management_Dev
-{
+{//ahmed
     internal static class Program
     {
         /// <summary>
@@ -20,6 +20,7 @@ namespace Stock_Management_Dev
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new SupplierForm());
+
         }
     }
 }
