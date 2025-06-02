@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,8 @@ namespace Stock_Management_Dev.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=StockManagement-Dev;Trusted_Connection=True;Trust server certificate=true ");
+            optionsBuilder.UseSqlServer("Server=.;Database=StockManagement-Dev;Trusted_Connection=True;Trust server certificate=true ")
+                                .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
         }
 
 
