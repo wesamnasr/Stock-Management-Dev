@@ -12,6 +12,8 @@ namespace Stock_Management.Models
         public string Name { get; set; }
         public string Phone { get; set; }
         public string? Email { get; set; }
+
+        public int Debt { get; set; } = 0; 
         public string? Address { get; set; }
 
         public virtual ICollection<CustomerBill> Invoices { get; set; }
