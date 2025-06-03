@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Stock_Management_Dev
 {
-    public partial class CustomerPillForm : Form
+    public partial class CustomerPillForm : UserControl
     {
         public CustomerPillForm()
         {
-          
+            InitializeComponent();
         }
     }
 }

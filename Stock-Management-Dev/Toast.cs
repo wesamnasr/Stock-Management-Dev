@@ -39,7 +39,7 @@ namespace Stock_Management_Dev
 
         private void txt_caption_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

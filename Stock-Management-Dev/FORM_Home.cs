@@ -13,7 +13,7 @@ using Stock_Management_Dev.Models;
 
 namespace Stock_Management_Dev
 {
-    public partial class FORM_Home : UserControl
+    public partial class FORM_Home : Form
     {
         public FORM_Home()
         {

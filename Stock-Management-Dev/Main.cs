@@ -21,8 +21,8 @@ namespace Stock_Management_Dev
             InitializeComponent();
             this.LookAndFeel.UseDefaultLookAndFeel = true;
             FORM_Home homeControl = new FORM_Home();
-            homeControl.Dock = DockStyle.Fill; // Makes the control fill the form
-            pn_container.Controls.Add(homeControl);
+            homeControl.Dock = DockStyle.Fill; 
+            pn_container.Controls.Add(homeControl.pn_stats);
         }
 
         [DllImport("user32.dll")]
@@ -78,30 +78,45 @@ namespace Stock_Management_Dev
 
         private void accordionControl1_ElementClick(object sender, DevExpress.XtraBars.Navigation.ElementClickEventArgs e)
         {
-            pn_container.Controls.Clear(); // Remove previous control
-
-            UserControl selectedControl = null;
-            Toast toast = new Toast();
-            // Match by element name or text
+            pn_container.Controls.Clear(); 
             switch (e.Element.Text)
             {
-                case "الرئيسية": // "Customers"
-                    selectedControl = new FORM_Home(); // your custom UserControl
+                case "الرئيسية": 
+                    FORM_Home form = new FORM_Home(); 
+                    form.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(form.pn_stats);
+                    label_title.Text = "الرئيسية";
                     break;
-                case "الموردين": // "Suppliers"
-                    toast.txt_caption.Text = "لسه يعم";
-                    toast.Show();
+                case "الموردين": 
+                  
+                    label_title.Text = "الموردين";
                     break;
-                    //case "إضافة صنف":
-                    //    selectedControl = new ItemControl();
-                    //    break;
-                    // Add more cases as needed
-            }
-
-            if (selectedControl != null)
-            {
-                selectedControl.Dock = DockStyle.Fill;
-                pn_container.Controls.Add(selectedControl);
+                case "فاتورة عميل": 
+                    //selectedControl = new CustomerPillForm();
+                    label_title.Text = "فاتورة عميل";
+                    break;
+                case "فاتورة مورد": 
+                    //selectedControl = new CustomerPillForm();
+                    label_title.Text = "فاتورة مورد";
+                    break;
+                case "الديون": 
+                    //selectedControl = new CustomerPillForm();
+                    label_title.Text = "الديون";
+                    break;
+                case "المستحقات":
+                    //selectedControl = new CustomerPillForm();
+                    label_title.Text = "المستحقات";
+                    break;
+                case "فواتير العملاء":
+                    BillsView billView = new BillsView();
+                    billView.pn_cont.Dock = DockStyle.Fill;
+                    pn_container.Controls.Add(billView.pn_cont);
+                    label_title.Text = "فواتير العملاء";
+                    break;
+                case "الأصناف": 
+                    //selectedControl = new CustomerPillForm();
+                    label_title.Text = "الأصناف";
+                    break;
             }
         }
     }
