@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
 using Stock_Management_Dev.Models;
+using Stock_Management_Dev.Middlewares;
 
 namespace Stock_Management_Dev
 {
@@ -20,63 +21,36 @@ namespace Stock_Management_Dev
             InitializeComponent();
         }
 
-        #region Validation
-        public bool IsTextBoxEmpty()
-        {
-            if (string.IsNullOrWhiteSpace(ProductNameTxt.Text) ||string.IsNullOrWhiteSpace(ProductDescriptionTxt.Text) ||
-           string.IsNullOrWhiteSpace(ProductQuantityTxt.Text) ||string.IsNullOrWhiteSpace(ProductPriceTxt.Text) ||
-           string.IsNullOrWhiteSpace(SupplierNumberTxt.Text))
-                return true;
-            else 
-                return false;
-            
-        }
-        public bool IsViolateDataType()
-        {
-            if(!int.TryParse(ProductQuantityTxt.Text,out _) || !int.TryParse(SupplierNumberTxt.Text, out _) || !decimal.TryParse(ProductPriceTxt.Text, out _))
-                return true;
-            else 
-                return false;
-        }
-        public bool CheckSupplierForeignKeyExisting()
-        {
-            var ForeignKey = context.Suppliers.Where(x => x.SupplierID == int.Parse(SupplierNumberTxt.Text)).FirstOrDefault();
-            if (ForeignKey != null)
-                return true;
-            else
-                return false; 
-
-        }
-        #endregion
-
-        #region Close The Form
-        public void CloseForm()
-        {
-            this.Close();
-        }
-        #endregion
-
         #region Add Product Function
         public void AddProduct(AppDBContext context)
         {
-            if (!IsTextBoxEmpty()) {
-                if (!IsViolateDataType())
+
+            #region Add Form Fields
+                string productName = ProductNameTxt.Text;
+                string productDescription = ProductDescriptionTxt.Text;
+                string productQuantity = ProductQuantityTxt.Text;
+                string productPrice = ProductPriceTxt.Text;
+                string supplierID = SupplierNumberTxt.Text;
+            #endregion
+
+            if (!Validation.IsTextBoxEmpty(productName,productDescription,productQuantity,productPrice,supplierID)) {
+                if (!Validation.IsViolateDataType(productQuantity,supplierID,productPrice))
                 {
-                    if (CheckSupplierForeignKeyExisting())
+                    if (Validation.CheckSupplierForeignKeyExisting(context,supplierID))
                     {
                         Product product = new Product()
                         {
-                            Name = ProductNameTxt.Text,
-                            Description = ProductDescriptionTxt.Text,
-                            QuantityInStock = int.Parse(ProductQuantityTxt.Text),
-                            UnitPrice = decimal.Parse(ProductPriceTxt.Text),
-                            SupplierID = int.Parse(SupplierNumberTxt.Text),
+                            Name = productName,
+                            Description = productDescription,
+                            QuantityInStock = int.Parse(productQuantity),
+                            UnitPrice = decimal.Parse(productPrice),
+                            SupplierID = int.Parse(supplierID),
                 
                         };
                         context.Products.Add(product);
                         context.SaveChanges();
                         MessageBox.Show("تم اضافة المنتج بنجاح", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        CloseForm();
+                        this.Close();
                     }
                     else
                     {
@@ -97,7 +71,6 @@ namespace Stock_Management_Dev
         }
         #endregion
 
-
         private void AddProduct_Click(object sender, EventArgs e)
         {
             context = new AppDBContext();
@@ -105,3 +78,33 @@ namespace Stock_Management_Dev
         }
     }
 }
+
+
+#region Validation
+//public bool IsTextBoxEmpty()
+//{
+//    if (string.IsNullOrWhiteSpace(ProductNameTxt.Text) ||string.IsNullOrWhiteSpace(ProductDescriptionTxt.Text) ||
+//   string.IsNullOrWhiteSpace(ProductQuantityTxt.Text) ||string.IsNullOrWhiteSpace(ProductPriceTxt.Text) ||
+//   string.IsNullOrWhiteSpace(SupplierNumberTxt.Text))
+//        return true;
+//    else 
+//        return false;
+
+//}
+//public bool IsViolateDataType()
+//{
+//    if(!int.TryParse(ProductQuantityTxt.Text,out _) || !int.TryParse(SupplierNumberTxt.Text, out _) || !decimal.TryParse(ProductPriceTxt.Text, out _))
+//        return true;
+//    else 
+//        return false;
+//}
+//public bool CheckSupplierForeignKeyExisting()
+//{
+//    var ForeignKey = context.Suppliers.Where(x => x.SupplierID == int.Parse(SupplierNumberTxt.Text)).FirstOrDefault();
+//    if (ForeignKey != null)
+//        return true;
+//    else
+//        return false; 
+
+//}
+#endregion

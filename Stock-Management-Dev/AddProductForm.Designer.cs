@@ -39,93 +39,93 @@
             SupplierNumberTxt = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
             AddProductBtn = new System.Windows.Forms.Button();
-            label6 = new System.Windows.Forms.Label();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // ProductNameTxt
             // 
-            ProductNameTxt.Location = new System.Drawing.Point(521, 104);
+            ProductNameTxt.Location = new System.Drawing.Point(471, 55);
             ProductNameTxt.Name = "ProductNameTxt";
-            ProductNameTxt.Size = new System.Drawing.Size(125, 27);
+            ProductNameTxt.Size = new System.Drawing.Size(161, 36);
             ProductNameTxt.TabIndex = 0;
-           
             // 
             // ProductDescriptionTxt
             // 
-            ProductDescriptionTxt.Location = new System.Drawing.Point(521, 165);
+            ProductDescriptionTxt.Location = new System.Drawing.Point(471, 116);
             ProductDescriptionTxt.Name = "ProductDescriptionTxt";
-            ProductDescriptionTxt.Size = new System.Drawing.Size(125, 27);
+            ProductDescriptionTxt.Size = new System.Drawing.Size(161, 36);
             ProductDescriptionTxt.TabIndex = 1;
             // 
             // ProductQuantityTxt
             // 
-            ProductQuantityTxt.Location = new System.Drawing.Point(521, 231);
+            ProductQuantityTxt.Location = new System.Drawing.Point(471, 182);
             ProductQuantityTxt.Name = "ProductQuantityTxt";
-            ProductQuantityTxt.Size = new System.Drawing.Size(125, 27);
+            ProductQuantityTxt.Size = new System.Drawing.Size(161, 36);
             ProductQuantityTxt.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(666, 107);
+            label1.Location = new System.Drawing.Point(652, 58);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(76, 20);
+            label1.Size = new System.Drawing.Size(87, 29);
             label1.TabIndex = 3;
             label1.Text = "اسم المنتج";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(686, 172);
+            label2.Location = new System.Drawing.Point(672, 123);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(56, 20);
+            label2.Size = new System.Drawing.Size(70, 29);
             label2.TabIndex = 4;
             label2.Text = "الوصف";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(686, 238);
+            label3.Location = new System.Drawing.Point(672, 189);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(48, 20);
+            label3.Size = new System.Drawing.Size(56, 29);
             label3.TabIndex = 5;
             label3.Text = "الكمية";
             // 
             // ProductPriceTxt
             // 
-            ProductPriceTxt.Location = new System.Drawing.Point(99, 107);
+            ProductPriceTxt.Location = new System.Drawing.Point(126, 58);
             ProductPriceTxt.Name = "ProductPriceTxt";
-            ProductPriceTxt.Size = new System.Drawing.Size(125, 27);
+            ProductPriceTxt.Size = new System.Drawing.Size(125, 36);
             ProductPriceTxt.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(244, 110);
+            label4.Location = new System.Drawing.Point(269, 58);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(83, 20);
+            label4.Size = new System.Drawing.Size(97, 29);
             label4.TabIndex = 7;
             label4.Text = "سعر الوحدة";
             // 
             // SupplierNumberTxt
             // 
-            SupplierNumberTxt.Location = new System.Drawing.Point(99, 186);
+            SupplierNumberTxt.Location = new System.Drawing.Point(126, 137);
             SupplierNumberTxt.Name = "SupplierNumberTxt";
-            SupplierNumberTxt.Size = new System.Drawing.Size(125, 27);
+            SupplierNumberTxt.Size = new System.Drawing.Size(125, 36);
             SupplierNumberTxt.TabIndex = 8;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(244, 193);
+            label5.Location = new System.Drawing.Point(269, 141);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(74, 20);
+            label5.Size = new System.Drawing.Size(92, 29);
             label5.TabIndex = 9;
             label5.Text = "رقم المورد";
             // 
             // AddProductBtn
             // 
-            AddProductBtn.Location = new System.Drawing.Point(305, 346);
+            AddProductBtn.Location = new System.Drawing.Point(269, 293);
             AddProductBtn.Name = "AddProductBtn";
             AddProductBtn.Size = new System.Drawing.Size(145, 46);
             AddProductBtn.TabIndex = 10;
@@ -133,36 +133,39 @@
             AddProductBtn.UseVisualStyleBackColor = true;
             AddProductBtn.Click += AddProduct_Click;
             // 
-            // label6
+            // groupBox1
             // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(347, 35);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(80, 20);
-            label6.TabIndex = 11;
-            label6.Text = "اضافة منتج";
+            groupBox1.Controls.Add(AddProductBtn);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(ProductPriceTxt);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(SupplierNumberTxt);
+            groupBox1.Controls.Add(ProductQuantityTxt);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(ProductDescriptionTxt);
+            groupBox1.Controls.Add(ProductNameTxt);
+            groupBox1.Font = new System.Drawing.Font("Showcard Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            groupBox1.Location = new System.Drawing.Point(12, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            groupBox1.Size = new System.Drawing.Size(776, 426);
+            groupBox1.TabIndex = 12;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "اضافة منتج";
             // 
             // AddProductForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(label6);
-            Controls.Add(AddProductBtn);
-            Controls.Add(label5);
-            Controls.Add(SupplierNumberTxt);
-            Controls.Add(label4);
-            Controls.Add(ProductPriceTxt);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(ProductQuantityTxt);
-            Controls.Add(ProductDescriptionTxt);
-            Controls.Add(ProductNameTxt);
+            Controls.Add(groupBox1);
             Name = "AddProductForm";
             Text = "AddProductForm";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -178,6 +181,6 @@
         private System.Windows.Forms.TextBox SupplierNumberTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button AddProductBtn;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
