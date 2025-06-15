@@ -330,7 +330,7 @@ namespace Stock_Management_Dev.Migrations
                             TotalPrice = 0m,
                             UnitPrice = 100m
                         });
-                });
+            });
 
             modelBuilder.Entity("Stock_Management_Dev.Models.Product", b =>
                 {
@@ -779,7 +779,7 @@ namespace Stock_Management_Dev.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
-                });
+            });
 
             modelBuilder.Entity("Stock_Management_Dev.Models.CustomerBillItem", b =>
                 {
@@ -862,7 +862,7 @@ namespace Stock_Management_Dev.Migrations
                 {
                     b.Navigation("Items");
                 });
-#pragma warning restore 612, 618
+
         }
     }
 }
