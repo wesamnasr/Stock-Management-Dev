@@ -19,6 +19,7 @@ namespace Stock_Management_Dev.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<CustomerBill> CustomerBills { get; set; }
         public DbSet<CustomerBillItem> CustomerBillItems { get; set; }
+        public DbSet<Password> Passwords { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -151,9 +152,17 @@ namespace Stock_Management_Dev.Models
                 })
             );
 
-          
+            //seeding password
+            modelBuilder.Entity<Password>().HasData(
+            new Password
+            {
+                PasswordID = 1,              
+                OldPassword = "123",
+                NewPassword = "123",
+                CreatedAt = DateTime.Now
+            });
+            
 
-        
 
 
 

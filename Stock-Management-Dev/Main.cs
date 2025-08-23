@@ -24,7 +24,7 @@ namespace Stock_Management_Dev
             homeControl.Dock = DockStyle.Fill; 
             pn_container.Controls.Add(homeControl.pn_stats);
         }
-
+        #region Drag
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
@@ -33,6 +33,17 @@ namespace Stock_Management_Dev
 
         const int WM_NCLBUTTONDOWN = 0xA1;
         const int HTCAPTION = 0x2;
+
+        private void panelControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+        #endregion
+
 
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -59,15 +70,6 @@ namespace Stock_Management_Dev
         private void pn_cont_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void panelControl1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-            }
         }
 
         private void accordionControlElement8_Click(object sender, DevExpress.XtraBars.Navigation.ElementClickEventArgs e)

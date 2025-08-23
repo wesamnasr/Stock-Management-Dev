@@ -55,7 +55,7 @@
             // 
             // gridControl1
             // 
-            gridControl1.DataSource = typeof(Models.CustomerBill);
+            gridControl1.DataSource = customerBillBindingSource;
             gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             gridControl1.Location = new System.Drawing.Point(0, 0);
             gridControl1.MainView = gridView1;

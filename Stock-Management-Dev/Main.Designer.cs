@@ -45,6 +45,7 @@
             accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -147,7 +148,7 @@
             // accordionControl1
             // 
             accordionControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement8, accordionControlElement1, accordionControlElement9, accordionControlElement4, accordionControlElement13, accordionControlElement10, accordionControlElement11, accordionControlElement12 });
+            accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { accordionControlElement8, accordionControlElement1, accordionControlElement9, accordionControlElement4, accordionControlElement13, accordionControlElement10, accordionControlElement11, accordionControlElement12, accordionControlElement14 });
             accordionControl1.Location = new System.Drawing.Point(988, 0);
             accordionControl1.LookAndFeel.SkinName = "Office 2019 Dark Gray";
             accordionControl1.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -242,6 +243,16 @@
             accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement12.Text = "فواتير العملاء";
             // 
+            // accordionControlElement14
+            // 
+            accordionControlElement14.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            accordionControlElement14.Appearance.Default.Options.UseFont = true;
+            accordionControlElement14.Height = 55;
+            accordionControlElement14.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement14.ImageOptions.Image");
+            accordionControlElement14.Name = "accordionControlElement14";
+            accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            accordionControlElement14.Text = "تغيير كلمة السر";
+            // 
             // accordionControlElement2
             // 
             accordionControlElement2.Appearance.Default.Font = new System.Drawing.Font("LBC", 17.9999981F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
@@ -335,6 +346,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
     }
 }
 
